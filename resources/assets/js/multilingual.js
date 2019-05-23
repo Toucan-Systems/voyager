@@ -95,7 +95,7 @@
             this.transInputs.each(function(i, inp) {
                 var _inp   = $(inp)
 
-                if(_this.element.attr('id') === 'menu_item_modal') {
+                if(_this.element.attr('id') === 'menu_item_modal' || $(_this.element[0]).find('button.save').length == 0) {
                     var inpUsr = _inp.next(_this.settings.editing ? '.form-control' : '');
                 } else {
                     var inpUsr = $(_inp).parent().find(_this.settings.editing ? '.form-control' : '');
